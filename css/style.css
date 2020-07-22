@@ -1,0 +1,603 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	background: url(../img/fondo1.jpeg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-attachment: fixed;
+}
+
+menu span{
+	padding-right: 5px;
+}
+
+header{
+	width: 100%;
+	background-color: rgba(0, 0, 0, .1);
+	position: fixed;
+	top: 0;
+	z-index: 100;
+}
+	 .logo{
+		width: 150px;
+		height: 100px;
+		float: left;
+		margin-top: -5px;
+	}
+		 .logo img{
+			width: 150px;
+			height: 110px;
+		}
+/*menu*/
+	nav.menu{
+		width: 100%;
+		right: 0;
+		padding-top: 20px;
+		text-align: center;
+	}
+		 nav.menu ul{
+			list-style: none;
+			overflow: hidden;
+		}
+			 nav.menu ul li{
+				float: right;
+			}
+				 nav.menu ul li a{
+					text-decoration: none;
+					color: #fff;
+					display: block;
+					padding: 10px ;
+					font-size: 15px;
+					-webkit-transition: 400ms;
+					-moz-transition: 400ms;
+					-o-transition: 400ms;
+				}
+				.menu ul li a:hover {
+					border-radius: 10px;
+					background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+					padding: 13px 20px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+					background-color: rgb(255, 255, 255);
+					font-weight: bold;
+					color: rgb(85, 106, 255);
+				}
+/*fin menu*/
+
+/*redes sociales flotantes*/
+.rrss {
+	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	left: 10px; /* Establecemos la barra en la izquierda */
+	top: 70%; /* Bajamos la barra 200px de arriba a abajo */
+	z-index: 100; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+ 
+	.rrss ul {
+		list-style: none;
+	}
+ 
+	.rrss ul li a {
+		display: inline-block;
+		color:#fff;
+		padding: 10px 10px;
+		margin-bottom: 5px;
+		text-decoration: none;
+		-webkit-transition:all 400ms ease;
+		-o-transition:all 400ms ease;
+		transition:all 400ms ease; /* Establecemos una transición a todas las propiedades */
+	}
+ 
+	.rrss ul li .icon-facebook2 {
+		border-radius: 100%;
+		border: 1px solid;
+		background: rgba(0, 0, 0, .5);  
+	} /* Establecemos los colores de cada red social, aprovechando su class */
+	.rrss ul li .icon-instagram {
+		background: rgba(0, 0, 0, .5);
+		border-radius: 100%;
+		border: 1px solid;  
+	}
+	.rrss ul li .icon- {background: #;}
+	.rrss ul li .icon- {background: #;}
+	.rrss ul li .icon- {background: #;}
+ 
+	.rrss ul li a:hover {
+		background: rgba(85, 106, 255, .9); /* Cambiamos el fondo cuando el usuario pase el mouse */
+		padding: 18px 18px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+		font-size: 20px;
+	}
+/*fin redes sociales*/
+
+/*slider*/	
+.cont-slider {
+    position: relative;
+    height: 100vh;
+    max-height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.slider {
+    animation: deslizante 55s ease-out 1s backwards infinite;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 500%;
+    height: 100%;
+}
+.slide {
+    display: inline-block;
+    position: relative;
+    width: 20%;
+    height: 100%;    
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+.slide span {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 0 5vh 5vh 0;
+    color: #FFF;
+    position: absolute;
+    left: 0;
+    top: 40vh;
+    font-size: 10vh;
+    line-height: 20vh;
+    border: 1px solid rgba(255,255,255,.45);
+    border-left: 0 none;
+    padding: 0 7px;
+}
+.uno {
+  background-image: url(../img/slider/imagen10.jpeg);}
+.dos {
+  background-image: url(../img/slider/imagen11.jpeg);}
+.tres {
+  background-image: url(../img/slider/imagen13.jpeg);}
+.cuatro {
+  background-image: url(../img/slider/imagen12.jpeg);}
+.cinco {
+  background-image: url(../img/slider/imagen8.jpeg);}
+
+@keyframes deslizante {
+  0% {left: 0%; }
+  15% {left: 0%; }
+  20% {left: -100%; }
+  35% {left: -100%; }
+  40% {left: -200%; }  
+  55% {left: -200%; }
+  60% {left: -300%; }
+  75% {left: -300%; }
+  80% {left: -400%; }
+  95% {left: -400%; }   
+  100% {left: 0; }
+}
+    @media only screen and (min-width:320px) and (max-width:768px){
+        .slider article span{
+            font-size: 40px;
+        }
+    }
+/*fin slider*/
+
+.espacio{
+	width: auto;
+	height: 95px;
+}
+
+.separador{
+	width: 100%;
+	background-color: rgba(255, 255, 255, .4);
+	text-align: right;
+	transition: 400ms;
+	margin: 0px auto;
+}
+	.separador h1{
+		margin-left:20px;
+		padding: 20px 150px;
+		font-family: 'Raleway', sans-serif;
+		font-weight: lighter;
+		font-size: 40px;
+	}
+
+/*Contenido*/
+
+.tripioent{
+	width: 100%;
+	height: 80vh;
+	padding: 100px;
+	display: flex;
+	background-color: rgba(0,0,0,0.1);
+}
+	.tripioent div{
+		width: 350px;
+		height: 400px;
+		margin: auto;
+		background-color: rgba(155, 186, 255, .8);
+		padding: 10px;
+		border-radius: 10px;
+		word-wrap: break-word;
+	}
+		.tripioent h1{
+			text-align: center;
+			margin: 15px auto;
+		}
+		.tripioent p{
+			margin: 10px;
+		}
+
+	.tripioent img{
+		display: block;
+		width: 350px;
+		height: 400px;
+		margin: auto;
+		border-radius: 10px;
+	}
+
+
+/*Galeria de imagenes*/
+.galeria{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	width: 100%;
+	margin: 0px auto;
+	grid-gap: 10px;
+	padding: 40px 70px;
+	overflow: hidden;
+	background-color: rgba(0,0,0,0.1);
+}
+.galeria > a{
+	display: block;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 0 6px 2px rgba(0, 0, 0, .5);
+}	
+	.galeria img{
+		margin: 0px auto;
+		width: 100%;
+		height: 300px;
+		vertical-align: top;
+		object-fit: cover;
+		transition: transform 0.5s;
+	}
+.galeria a:hover img{
+	filter: blur(2px);
+	transform: rotate(10deg) scale(1.3);
+}
+/*Lightbox*/
+.lightbox{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.5);
+	width: 100%;
+	height: 100vh;
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: scale(0);
+	transition: transform 400ms ease-in-out;
+}
+	.lightbox img{
+		width: 70vw;
+		height: 100%;
+		max-height: 80vh;
+	}
+.lightbox:target{
+	transform: scale(1);
+}
+
+.close{
+	display: block;
+	position: absolute;
+	top:40px;
+	right: 40px;
+	background-color: rgba(135, 206, 235, .85);
+	color: white;
+	border-radius: 50%;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 10px;
+	padding: 12px;
+}
+.next{
+	display: block;
+	background-color: rgba(135, 206, 235, .85);
+	color: #fff;
+	width: 30px;
+	height: 30px;
+	text-decoration: none;
+	text-align: center;
+	line-height: 31px;
+	margin-left: 10px;
+	border-radius: 2px;
+}
+.prev{
+	display: block;
+	background-color: rgba(135, 206, 235, .85);
+	color: #fff;
+	width: 30px;
+	height: 30px;
+	text-decoration: none;
+	text-align: center;
+	line-height: 31px;
+	margin-right: 10px;
+	border-radius: 2px;
+}
+/*Lightbox*/
+
+/*servicios*/
+.servicios{
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, .1);
+}
+.producto{
+	width: 800px;
+	height: 200px;
+	background-color: rgba(255,255,255,.9);
+	margin: 20px auto;
+	display: flex;
+}
+	.producto h1{
+		font-family: 'Rowdies';
+		font-weight: 1;
+	}
+	.producto div{
+		width: 400px;
+		display: grid;
+		margin: 20px auto;
+		padding: 20px;
+		float: left;
+	}
+	
+	.producto article img{
+		display: block;
+		width: 100%;
+		max-width: 400px;
+		height: 200px;
+	}
+
+	.producto div > #comentario{
+		text-align: right;
+		margin-top: 10px;
+		font-weight: lighter;
+		font-family: 'Rowdies';
+	}
+	
+/*fin servicios*/
+
+/*Buscador de vuelos*/
+.vuelos{
+	width: 100%;
+	height: 60vh;
+	background: rgba(0,0,0,0.1);
+}
+
+.viaje{
+	background: rgba(255, 255, 255, .9);
+	border-radius: 10px;
+	width: 80%;
+	height: 200px;
+	margin-left:  auto;
+	margin-right: auto;
+	margin-top: 150px;
+	padding: 20px;
+}
+	.search{
+		margin: 20px auto;
+		padding: 5px;
+	}
+		.buscador h1{
+			float: left;
+			margin: 0 10px;
+		}
+			#ida{
+				margin-left: 150px;
+			}
+			.buscador input{
+				margin-left: 20px;
+			}
+	.busqueda{
+		display: flex;
+		margin: auto;
+	}
+		.busqueda div{
+			margin: 0 10px;
+		}
+		.origen{
+			background-color: rgba(85, 106, 255,.2);
+			padding: 10px;
+			border-radius: 10px;
+		}
+		.destino{
+			background-color: rgba(85, 106, 255,.2);
+			padding: 10px;
+			border-radius: 10px;
+		}
+		.fecha{
+			background-color: rgba(85, 106, 255,.2);
+			padding: 10px;
+			border-radius: 10px;
+			width: 120px;
+		}
+			.fecha input{
+				width: 50px;
+			}
+
+		.pasajeros{
+			background-color: rgba(85, 106, 255,.2);
+			padding: 10px;
+			border-radius: 10px;
+			width: 200px;
+		}
+/*fin Buscador de vuelos*/
+
+/*Contacto*/
+.contacto{
+	width: 100%;
+	height: 78.4vh;
+}
+
+.contacto h1{
+    text-align: center;
+    margin: 10px 0;
+    font-weight: lighter;
+    font-family: 'Rowdies';
+}
+
+.contacto form{
+    background: rgba(255,255,255,.9);
+    width: 100%;
+    padding: 10px 0;
+    margin: auto;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+}
+
+.contacto .form{
+    width: 50%;
+    margin: auto;
+}
+
+.contacto form .grupo{
+    position: relative;
+    margin: 45px;
+}
+
+.contacto input, .contacto textarea{
+    background: rgba(85, 106, 255,.2);
+    color:#c6c6c6;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%; 
+    border: 1px solid var(--colorTextos);
+    border-radius: 5px;
+    resize: none;
+}
+
+.contacto input:focus, .contacto textarea:focus{
+    outline: none;
+    color: rgb(94,93,93);
+}
+
+.contacto input:focus~label, .contacto
+input:valid~label, .contacto
+textarea:focus~label, .contacto textarea:valid~label{
+    position: absolute;
+    top: -14px;
+    font-size: 12px;
+    color: #2196F3;
+}
+
+.contacto label{
+    color: var(--colorTextos);
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top:10px;
+    transition: 0.5s ease all;
+    pointer-events: none;
+}
+
+
+.contacto input:focus~.barra::before, textarea:focus~.barra::before{
+    width: 100%;
+}
+.contacto .barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.contacto .barra::before{
+    content: '';
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #6A82FB, #FC5C7D);
+    transition: 0.3s ease all;
+    left: 0%;
+}
+.contacto button{
+/*    background: #FC5C7D;
+    /* fallback for old browsers */
+/*    background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);
+    /* Chrome 10-25, Safari 5.1-6 */
+/*    background: linear-gradient(to right, #6A82FB, #FC5C7D);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   	background-color: transparent; 
+   	border: 1px solid;
+   	border-color: rgb(85, 106, 255);
+    display: block;
+    width: 100px;
+    height: 40px;
+    color:#000; 
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px auto;
+    cursor: pointer;
+    transition: 200ms;
+}
+	.contacto button:hover{
+		background-color: rgba(85, 106, 255);
+		color: white;
+	}
+
+@media screen and (max-width:1100px){
+    .contacto form{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .contacto form{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:450px){
+    .contacto form{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:300px){
+    .contacto form{
+        width: 90%;
+    }
+}
+/*fin Contacto*/
+
+/*fin contenido*/
+
+/*Footer*/
+footer{
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px;
+	margin-top: 50px;
+	margin-bottom: 0;
+	text-align: center;
+	background-color: rgba(255,255,255, .65);
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+}
+
+@media screen and (max-width: 100px) {
+	.tripioent{
+		flex-direction: column;
+	}
+	.producto{
+		flex-direction: column;
+	}
+
+}
